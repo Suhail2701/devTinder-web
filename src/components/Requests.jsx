@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { addRequests } from "../store/slices/requestSlice";
 import { useSelector } from "react-redux";
-import RequestUser from "./requestUser";
+import RequestUser from "./RequestUser";
 
 
 
@@ -12,6 +12,7 @@ const Requests = ()=>{
     const dispatch = useDispatch();
     const getRequests = useSelector((store)=>store.requests);
 
+    
     const handleRequests = async()=>{
         try{
             const requests = await axios.get(`${BASE_URL}/user/requests/received`,{withCredentials:true});
