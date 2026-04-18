@@ -1,4 +1,4 @@
-import UserCard from "./userCard";
+import UserCard from "./UserCard";
 import axios from "axios";
 import { BASE_URL } from "../constants";
 import { useDispatch, useSelector } from "react-redux";
