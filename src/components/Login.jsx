@@ -16,10 +16,11 @@ const Login = () => {
   const [isLogin, setIsLogin] = useState(true);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  
   const handleLogin = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:3000/login",
+        `${BASE_URL}/login`,
         {
           emailId: email,
           password: password,
